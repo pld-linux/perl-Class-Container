@@ -10,7 +10,8 @@ Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
 Name:		perl-Class-Container
 Version:	0.11
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	57bc137f6e167fab10d7173088157d5e
