@@ -1,4 +1,3 @@
-# $Revision: 1.1 $
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Container
@@ -30,7 +29,6 @@ their own subclass for any of these objects.
 # %description -l pl
 # TODO
 
-
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 # We do not sleep.
@@ -45,7 +43,6 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
