@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Class
-%define	pnam	Container
+%define		pdir	Class
+%define		pnam	Container
 Summary:	Class::Container - glues object frameworks together transparently
 Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
 Name:		perl-Class-Container
