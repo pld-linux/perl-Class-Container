@@ -4,9 +4,9 @@
 Summary:	%{pdir}::%{pnam} perl module
 Summary(pl):	Modu³ perla %{pdir}::%{pnam}
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.05
+Version:	0.07
 Release:	1
-License:	?
+License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.005
