@@ -9,10 +9,9 @@ Release:	1
 License:	?
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005
-#BuildRequires:	perl(Params::Validate) >= 0.18
 BuildRequires:	perl-Params-Validate >= 0.18
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,8 +25,14 @@ and several other objects must create each other transparently, passing
 the appropriate parameters to the right class, possibly substituting
 their own subclass for any of these objects.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ta klasa u³atwia tworzenie szkieletu dla ró¿nych, wspó³pracuj±cych ze
+sob±, klas. Pierwotnie by³a zaprojektowana i stworzona dla
+HTML::Mason, w którym Compiler, Lexer, Interpreter, Resolver,
+Component, Buffer i kilka innych obiektów musz± tworzyæ inne w sposób
+przezroczysty, przekazuj±c odpowiednie parametry do w³a¶ciwej klasy,
+byæ mo¿e tak¿e podstawiaj±c swoj± w³asn± podklasê za dowolny z tych
+obiektów.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -51,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_sitelib}/Class/Container.pm
-%{_mandir}/man3/*.3pm.gz
+%{_mandir}/man3/*.3pm*
