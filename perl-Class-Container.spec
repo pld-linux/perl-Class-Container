@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Container
@@ -21,7 +22,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	"perl(Scalar::Util)"
+%define		_noautoreq	'perl(Scalar::Util)'
 
 %description
 This class facilitates building frameworks of several classes that
@@ -55,7 +56,8 @@ obiektów.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
