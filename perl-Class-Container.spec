@@ -42,7 +42,7 @@ obiektów.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 # We do not sleep.
-perl -ni -e 'print unless /sleep/' Makefile.PL
+%{__perl} -ni -e 'print unless /sleep/' Makefile.PL
 
 %build
 %{__perl} Makefile.PL
