@@ -8,12 +8,12 @@
 Summary:	Class::Container - glues object frameworks together transparently
 Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
 Name:		perl-Class-Container
-Version:	0.10
-Release:	3
+Version:	0.11
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	03ba631bba8783f0a0d458513dd85f31
+# Source0-md5:	57bc137f6e167fab10d7173088157d5e
 BuildRequires:	perl-devel >= 5.005
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Params-Validate >= 0.18
