@@ -4,11 +4,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Container
-Summary:	Class::Container - Glues object frameworks together transparently
+Summary:	Class::Container - glues object frameworks together transparently
 Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Class-Container
 Version:	0.10
-Release:	1
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
