@@ -5,7 +5,7 @@
 %define	pdir	Class
 %define	pnam	Container
 Summary:	Class::Container - Glues object frameworks together transparently
-#Summary(pl):	Class::Container - 
+Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.08
 Release:	1
