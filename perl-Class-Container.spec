@@ -1,16 +1,21 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Container
-Summary:	%{pdir}::%{pnam} perl module
-Summary(pl):	Modu³ perla %{pdir}::%{pnam}
+Summary:	Class::Container - Glues object frameworks together transparently
+#Summary(pl):	Class::Container - 
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.07
+Version:	0.08
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.005
+%if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Params-Validate >= 0.18
+%endif
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,7 +47,8 @@ perl -ni -e 'print unless /sleep/' Makefile.PL
 %build
 perl Makefile.PL
 %{__make}
-%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
