@@ -6,7 +6,7 @@
 %define		pdir	Class
 %define		pnam	Container
 Summary:	Class::Container - glues object frameworks together transparently
-Summary(pl):	Class::Container - przezroczyste sklejanie szkieletów obiektów
+Summary(pl.UTF-8):   Class::Container - przezroczyste sklejanie szkieletÃ³w obiektÃ³w
 Name:		perl-Class-Container
 Version:	0.12
 Release:	1
@@ -33,14 +33,14 @@ and several other objects must create each other transparently, passing
 the appropriate parameters to the right class, possibly substituting
 their own subclass for any of these objects.
 
-%description -l pl
-Ta klasa u³atwia tworzenie szkieletu dla ró¿nych, wspó³pracuj±cych ze
-sob±, klas. Pierwotnie by³a zaprojektowana i stworzona dla
-HTML::Mason, w którym Compiler, Lexer, Interpreter, Resolver,
-Component, Buffer i kilka innych obiektów musz± tworzyæ inne w sposób
-przezroczysty, przekazuj±c odpowiednie parametry do w³a¶ciwej klasy,
-byæ mo¿e tak¿e podstawiaj±c swoj± w³asn± podklasê za dowolny z tych
-obiektów.
+%description -l pl.UTF-8
+Ta klasa uÅ‚atwia tworzenie szkieletu dla rÃ³Å¼nych, wspÃ³Å‚pracujÄ…cych ze
+sobÄ…, klas. Pierwotnie byÅ‚a zaprojektowana i stworzona dla
+HTML::Mason, w ktÃ³rym Compiler, Lexer, Interpreter, Resolver,
+Component, Buffer i kilka innych obiektÃ³w muszÄ… tworzyÄ‡ inne w sposÃ³b
+przezroczysty, przekazujÄ…c odpowiednie parametry do wÅ‚aÅ›ciwej klasy,
+byÄ‡ moÅ¼e takÅ¼e podstawiajÄ…c swojÄ… wÅ‚asnÄ… podklasÄ™ za dowolny z tych
+obiektÃ³w.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
