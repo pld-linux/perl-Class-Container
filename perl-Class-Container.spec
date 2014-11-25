@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Class
 %define		pnam	Container
+%include	/usr/lib/rpm/macros.perl
 Summary:	Class::Container - glues object frameworks together transparently
 Summary(pl.UTF-8):	Class::Container - przezroczyste sklejanie szkieletów obiektów
 Name:		perl-Class-Container
@@ -15,11 +15,12 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6896bdb4464b96ad638e22b0400acbc9
+URL:		http://search.cpan.org/dist/Class-Container/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Params-Validate >= 0.18
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,9 +30,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This class facilitates building frameworks of several classes that
 inter-operate. It was first designed and built for "HTML::Mason", in
 which the Compiler, Lexer, Interpreter, Resolver, Component, Buffer,
-and several other objects must create each other transparently, passing
-the appropriate parameters to the right class, possibly substituting
-their own subclass for any of these objects.
+and several other objects must create each other transparently,
+passing the appropriate parameters to the right class, possibly
+substituting their own subclass for any of these objects.
 
 %description -l pl.UTF-8
 Ta klasa ułatwia tworzenie szkieletu dla różnych, współpracujących ze
